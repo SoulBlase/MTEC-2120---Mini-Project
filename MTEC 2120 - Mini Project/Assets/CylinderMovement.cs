@@ -1,0 +1,34 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CylinderMovement : MonoBehaviour
+{
+    int Number = 5;
+    float Decimal = 6.032f;
+    Vector3 ThreePoints;
+
+    int RandomYPositionThatIsUpOrDown;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        TeleportCylinderUpAndDown();
+    }
+
+    void TeleportCylinderUpAndDown()
+    {
+        RandomYPositionThatIsUpOrDown = Random.Range(0, 2);
+        transform.position = new Vector3(transform.position.x, 0 + 5 * RandomYPositionThatIsUpOrDown,
+        transform.position.z);
+
+
+    }
+}
